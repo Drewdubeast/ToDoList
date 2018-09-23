@@ -45,10 +45,25 @@ function init() {
       var newItem = document.createElement("li")
       newItem.textContent = todo.name;
       setColorForItem(todo, newItem)
-      console.log(todo)
       toDoList.appendChild(newItem)
     })
   }
+
+  //Add event listener to the todo list
+  toDoList.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
+
+  //add the x to each
+  toDoList.childNodes.forEach(function(toDo) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    toDo.appendChild(span);
+  })
 }
 
 function addNewToDo() {
@@ -79,16 +94,16 @@ function addNewToDo() {
 function setColorForItem(toDo, element) {
   switch (toDo.category) {
     case "school":
-      element.style.backgroundColor = "blue"
+      element.style.backgroundColor = "#ceefd0"
       break
     case "errand":
-      element.style.backgroundColor = "yellow"
+      element.style.backgroundColor = "#cee8ef"
       break
     case "personal":
-      element.style.backgroundColor = "cyan"
+      element.style.backgroundColor = "#d2c4f2"
       break
     case "other":
-      element.style.backgroundColor = "red"
+      element.style.backgroundColor = "#f1c3ca"
       break
     default:
       break
