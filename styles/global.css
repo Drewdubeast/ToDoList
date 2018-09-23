@@ -15,11 +15,11 @@ ul.navigation {
   background-color: #333;
 }
 
-li {
+ul.navigation li {
   float: left;
 }
 
-li a {
+ul.navigation li a {
   display: block;
   color: white;
   text-align: center;
@@ -27,10 +27,26 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+ul.navigation li a:hover {
   background-color: #111;
 }
 
+ul.toDoList {
+  margin: 10%;
+  padding: 10%;
+  list-style: none;
+}
+
+ul.toDoList li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
 .toDoList {
-  
+  display: inline;
+  margin: auto;
 }
