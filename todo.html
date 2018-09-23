@@ -4,8 +4,9 @@
     <title>Drew's Site</title>
     <link rel="stylesheet" type="text/css" href="styles/global.css" />
     <script src="javascript/ToDoList.js"></script>
+    <meta charset="UTF-8">
   </head>
-  <body>
+  <body onload="init();">
     <div>
       <h1>To Do List</h1>
       <h2>Welcome to Drew First Assignment!</h2>
@@ -27,22 +28,17 @@
       <div id="addNewToDo">
         <input type="text" id="nameInput" placeholder="Item Name...">
         <select id="categoryInput">
-          <option value="school">School</option>
+          <option value="chool">School</option>
           <option value="errand">Errand</option>
           <option value="personal">Personal</option>
           <option value="other">Other</option>
         </select>
         <input type="select" id="descriptionInput" placeholder="Item Description...">
-        
         <button onclick="addNewToDo();">Add</button>
-        <!-- Here add the form to add a new item -->
       </div>
 
       <ul class="toDoList" id="toDoList">
-        <li>Do Operating Systems homework</li>
-        <li>Do web development homework</li>
-        <li class="checked">Procrastinate</li>
-        <li>Do german hw</li>
+
       </ul>
 
 
