@@ -169,12 +169,31 @@ function sort() {
 function setupTimer(toDo) {
   var x = setInterval(function() {
     var now = new Date();
+    now.setMinutes(now.getMinutes()+5);
     var difference = toDo.dueDate - now
 
     if(difference < 0) {
       //Do the shit now.
-      console.log("TIMER DONE!")
+      var alertBox = document.getElementById("alert")
+      alertBox.textContent = toDo.name + " is due in 5 minutes! Click this alert to remove."
+      alertBox.style.display = "block"
+      alertBox.addEventListener('click', function() {
+        alertBox.style.display = "none"
+      })
+      var audio = new Audio('audio/ding.wav');
+      audio.play();
       clearInterval(x)
     }
   })
+}
+
+function showAlert() {
+  var alertBox = document.getElementById("alert")
+  alertBox.textContent = " is due in 5 minutes!"
+  alertBox.style.display = "block"
+  alertBox.addEventListener('click', function() {
+    alertBox.style.display = "none"
+  })
+  var audio = new Audio('audio/ding.wav');
+  audio.play();
 }
