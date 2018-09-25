@@ -3,10 +3,9 @@
   <head>
     <title>Drew's Site</title>
     <link rel="stylesheet" type="text/css" href="styles/global.css" />
-    <script src="javascript/ToDoList.js"></script>
     <meta charset="UTF-8">
   </head>
-  <body onload="init();">
+  <body>
     <div>
       <h1>To Do List</h1>
       <h2>Welcome to Drew First Assignment!</h2>
@@ -33,18 +32,29 @@
           <option value="personal">Personal</option>
           <option value="other">Other</option>
         </select>
-        <input type="select" id="descriptionInput" placeholder="Item Description...">
+        <input type="text" id="descriptionInput" placeholder="Description...">
+        <input type="datetime-local" id="dueDateInput" placeholder="Due By...">
         <button onclick="addNewToDo();">Add</button>
       </div>
 
       <ul class="toDoList" id="toDoList">
-
       </ul>
+
+      <div>
+        <select id="sortByInput">
+          <option value="incompleteVScomplete">Incomplete vs. Complete</option>
+          <option value="category">Category</option>
+          <option value="dateTimeAdded">Date/Time Added</option>
+          <option value="dateTimeDue">Date/Time Due</option>
+        </select>
+      </div>
 
 
     </div>
     <p>
       Welcome to the to do list!
     </p>
+
+    <script src="javascript/ToDoList.js"></script>
   </body>
 </html>
