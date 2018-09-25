@@ -23,5 +23,96 @@
     <p>
       Welcome to the Photo Gallery.
     </p>
+
+    <div class="row">
+      <div class="column">
+        <img class="galleryImage" src="https://www.publicdomainpictures.net/pictures/40000/velka/rough-collie-dog-portrait-1366347871ax8.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://thumb7.shutterstock.com/display_pic_with_logo/2442758/395371894/stock-photo-purebred-rough-collie-dog-portrait-in-studio-395371894.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://image.shutterstock.com/image-photo/purebred-rough-collie-dog-portrait-450w-395369608.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/981/cow-1380252.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/3d3/droplets-1395002.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/b59/water-droplets-1199367.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/0bd/water-1323225.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/583/water-1194261.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/afe/water-1571089.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/953/water-1177252.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/176/mansion-in-the-canyon-1575490.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/51b/sunset-1378821.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.pexels.com/photos/1090972/pexels-photo-1090972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/304/sunset-1228552.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/544/sunset-1404081.jpg" onclick="openModal();showImage(this)" class="hover-shadow">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/8ce/sunset-1362536.jpg" onclick="openModal();showImage(16)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/dfa/waikiki-sunset-1518883.jpg" onclick="openModal();showImage(17)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/24d/hawaii-sunset-1369415.jpg" onclick="openModal();showImage(18)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/d18/the-end-of-a-perfect-hawaiian-day-1164960.jpg" onclick="openModal();showImage(19)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img class="galleryImage" src="https://images.freeimages.com/images/large-previews/0c4/sunset-1391582.jpg" onclick="openModal();showImage(20)" class="hover-shadow">
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+          Helllloooo
+          <img id="mainImage" src="https://images.freeimages.com/images/large-previews/b59/water-droplets-1199367.jpg" style="width:100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript/PhotoGallery.js"></script>
   </body>
 </html>
