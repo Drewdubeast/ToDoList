@@ -9,7 +9,6 @@
     <div>
       <h1>To Do List</h1>
       <h2>Welcome to Drew First Assignment!</h2>
-      <button type="button" onclick="clicked();">my button</button>
       <ul class="navigation">
         <li>
           <a href="todo.html">To Do List</a>
@@ -36,24 +35,23 @@
         <input type="datetime-local" id="dueDateInput" placeholder="Due By...">
         <button onclick="addNewToDo();">Add</button>
       </div>
-
-      <ul class="toDoList" id="toDoList">
-      </ul>
-
       <div>
         <select id="sortByInput">
-          <option value="incompleteVScomplete">Incomplete vs. Complete</option>
+          <option value="name">Name</option>
+          <option value="complete">Incomplete vs. Complete</option>
           <option value="category">Category</option>
-          <option value="dateTimeAdded">Date/Time Added</option>
-          <option value="dateTimeDue">Date/Time Due</option>
+          <option value="timeCreated">Date/Time Added</option>
+          <option value="dueDate">Date/Time Due</option>
         </select>
+        <button onclick="sort();">Sort</button>
+      </div>
+      <div>
+        <ul class="toDoList" id="toDoList">
+        </ul>
       </div>
 
 
     </div>
-    <p>
-      Welcome to the to do list!
-    </p>
 
     <script src="javascript/ToDoList.js"></script>
   </body>
