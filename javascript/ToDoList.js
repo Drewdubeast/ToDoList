@@ -28,7 +28,6 @@ function addNewToDo() {
     timeCreated: new Date(),
     complete: false,
   }
-  console.log(newToDo)
   if(newToDo.name === "" || newToDo.description === "" || newToDo.dueDate === "Invalid Date") {
     alert("You must fill in all the fields!")
   } else {
@@ -94,6 +93,8 @@ function setUpToDoItem(toDo, element) {
     })
   }
   element.appendChild(span);
+
+  setupTimer(toDo)
 }
 
 function updateLocalStorage() {
@@ -163,4 +164,17 @@ function sort() {
 
   updateLocalStorage();
   location.reload()
+}
+
+function setupTimer(toDo) {
+  var x = setInterval(function() {
+    var now = new Date();
+    var difference = toDo.dueDate - now
+
+    if(difference < 0) {
+      //Do the shit now.
+      console.log("TIMER DONE!")
+      clearInterval(x)
+    }
+  })
 }
