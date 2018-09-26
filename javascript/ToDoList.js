@@ -186,14 +186,3 @@ function setupTimer(toDo) {
     }
   })
 }
-/*
-function showAlert() {
-  var alertBox = document.getElementById("alert")
-  alertBox.textContent = " is due in 5 minutes!"
-  alertBox.style.display = "block"
-  alertBox.addEventListener('click', function() {
-    alertBox.style.display = "revert"
-  })
-  var audio = new Audio('audio/ding.wav');
-  audio.play();
-}*/
