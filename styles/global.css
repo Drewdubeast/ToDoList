@@ -101,6 +101,10 @@ ul.toDoList li.checked {
     color: black;
 }
 
+.row {
+  display: flex;
+}
+
 .row > .column {
   padding: 0 8px;
 }
